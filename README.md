@@ -1,68 +1,77 @@
 
-# 🛡️ Network Packet Analyzer (Python + Scapy)
+# 🛡️ Network Packet Analyzer — Python + Scapy
 
-A custom **network packet analyzer** written in Python using **Scapy**. It captures and inspects real-time network traffic including IP, TCP, UDP, DNS, HTTP, HTTPS, ICMP, and more.
+A powerful and extensible **network packet analyzer** built with Python and Scapy. This tool captures and analyzes live traffic on a selected network interface, offering deep visibility into IP, TCP, UDP, DNS, HTTP, and more.
 
-> 🔬 Built as part of my hands-on cybersecurity learning to simulate threat detection and understand packet-level inspection.
+> 🔍 Designed as part of a real-world cybersecurity project to understand traffic analysis, simulate threat detection, and develop packet inspection skills.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- Live packet capturing on selected interface
-- Protocol-wise analysis: TCP, UDP, HTTP, DNS, ICMP
-- HTTP method/host/path extraction
-- DNS query/response parsing
-- BPF filter support (e.g., `tcp port 80`)
-- Logging to file
-- Supports IPv4 and IPv6
+- 📡 Live packet sniffing on any network interface
+- 🔍 Protocol-level dissection: TCP, UDP, ICMP, DNS, HTTP/HTTPS
+- 🌐 Support for IPv4 and IPv6 traffic
+- 🧠 Intelligent parsing of HTTP requests and DNS queries
+- 🧰 BPF filter support (e.g., `tcp port 80`) for precise captures
+- 📝 Packet logging to file for offline analysis
+- ⚙️ Modular code with detailed error handling and logging
 
 ---
 
 ## 🧪 Demo Screenshots
 
-📸 Packet capture with ICMP, DNS, TCP:  
+📸 ICMP, DNS, and TCP traffic capture:  
 ![Packet Capture](screenshots/packet-capture.png)
 
-📸 Ping, Nmap, Whois test:  
+📸 Analysis with ping, Nmap, and Whois:  
 ![Ping, Whois](screenshots/ping-nmap-whois.png)
 
-📸 Port 80 filtering with HTTP/HTTPS:  
+📸 BPF Filtering for Port 80 and HTTP/HTTPS traffic:  
 ![Filter TCP Port 80](screenshots/filter-port80.png)
 
 ---
 
-## ⚙️ Usage
+## ⚙️ How to Use
+
+> Ensure you have Python 3 and Scapy installed. Run with root/sudo privileges to access raw sockets.
 
 ```bash
 # Basic usage
 sudo python3 packet_analyzer.py -i eth0
 
-# With filter
+# With a custom BPF filter (e.g., only port 80)
 sudo python3 packet_analyzer.py -i eth0 -f "tcp port 80"
 
-# Capture fixed number of packets
+# Capture a limited number of packets (e.g., 100)
 sudo python3 packet_analyzer.py -i eth0 -c 100
 
-# Log to file
-sudo python3 packet_analyzer.py -i eth0 -l logs.txt
+# Log captured packet summaries to a file
+sudo python3 packet_analyzer.py -i eth0 -l capture_log.txt
 ```
-
-> ℹ️ Run with `sudo` as raw sockets require privileges.
 
 ---
 
-## 📁 File Structure
+## 📁 Project Structure
 
 ```
-├── packet_analyzer.py
-├── screenshots/
+📦 network-packet-analyzer/
+├── 📄 packet_analyzer.py      # Main script
+├── 📁 screenshots/            # Demo images for documentation
 │   ├── packet-capture.png
 │   ├── ping-nmap-whois.png
 │   └── filter-port80.png
-├── README.md
-├── LICENSE
+├── 📄 README.md               # Project overview
+├── 📄 LICENSE                 # MIT License
 ```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language**: Python 3
+- **Libraries**: Scapy
+- **Tested With**: Wireshark, Nmap, curl, ping, dig
 
 ---
 
