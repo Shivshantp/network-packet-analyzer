@@ -104,13 +104,13 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ---
 
-## 🙋‍♂️ Author
+## 👨‍💻 Author
 
 **Shivshant Patil**  
-Cybersecurity Enthusiast | CEH (v13) | Python & Linux | Packet Analysis
-
-📧 shivshantp007@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/shivshant-patil-b58aaa281)
+Certified Ethical Hacker (CEH v13)  
+B.Tech Computer Engineering Graduate  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/shivshant-patil-b58aaa281)  
+🔗 [GitHub Profile](https://github.com/Shivshantp)
 
 ---
 
